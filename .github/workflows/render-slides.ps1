@@ -4,8 +4,9 @@
 
 # If the script is executed from the .github/workflows directory, change to the root directory of the repository
 $rootDirectory = Get-Location
-if ($rootDirectory.Path -match '\.github\\workflows$') {
-    Set-Location -Path '..\..'
+$pathSeparator = [IO.Path]::DirectorySeparatorChar
+if ($rootDirectory.Path -match "\.github${pathSeparator}workflows$") {
+    Set-Location -Path "..${pathSeparator}.."
     $rootDirectory = Get-Location
 }
 
@@ -14,7 +15,7 @@ $distDirectory = Join-Path -Path $rootDirectory.Path -ChildPath 'dist'
 if (-not (Test-Path -Path $distDirectory)) {
     New-Item -Path $distDirectory -ItemType Directory
     # copy all files from the site-root folder to the dist folder
-    Copy-Item -Path 'site-root\*' -Destination $distDirectory -Recurse -Force
+    Copy-Item -Path "site-root${pathSeparator}*" -Destination $distDirectory -Recurse -Force
 }
 
 # Load all the slide direcotries
@@ -46,7 +47,7 @@ foreach ($slideDirectory in $slideDirectories) {
         #"Rendering $slideFile using Marp CLI"
         #$slideFile
         # Call `npx @marp-team/marp-cli@latest $slideFile --output $slideDistDirectory/index.html`
-        Start-Process -FilePath 'npx' -ArgumentList '@marp-team/marp-cli@latest', $slideFile, '--output', "$slideDistDirectory\index.html", "--yes" -NoNewWindow -Wait
+        Start-Process -FilePath 'npx' -ArgumentList '@marp-team/marp-cli@latest', $slideFile, '--output', "${slideDistDirectory}${pathSeparator}index.html", "--yes" -NoNewWindow -Wait
         #"Slide rendered"
     }
 
@@ -58,4 +59,11 @@ foreach ($slideDirectory in $slideDirectories) {
 }
 Write-Progress -Activity "Rendering slides" -Status "Completed" -PercentComplete 100
 Write-Progress -Completed -Activity "Rendering slides"
+
+Write-Host "Listing files under the dist directory"
+$distFiles = Get-ChildItem -Path $distDirectory -Recurse
+foreach ($file in $distFiles) {
+    Write-Host $file.FullName
+}
+
 Write-Host "Done rendering slides"
