@@ -1,3 +1,6 @@
+node_modules
+
 /dist
 
-**/index.html
+**/*.html
+!/site-root/**/*.html

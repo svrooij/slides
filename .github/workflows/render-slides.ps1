@@ -13,6 +13,8 @@ if ($rootDirectory.Path -match '\.github\\workflows$') {
 $distDirectory = Join-Path -Path $rootDirectory.Path -ChildPath 'dist'
 if (-not (Test-Path -Path $distDirectory)) {
     New-Item -Path $distDirectory -ItemType Directory
+    # copy all files from the site-root folder to the dist folder
+    Copy-Item -Path 'site-root\*' -Destination $distDirectory -Recurse -Force
 }
 
 # Load all the slide direcotries
@@ -55,3 +57,5 @@ foreach ($slideDirectory in $slideDirectories) {
     }
 }
 Write-Progress -Activity "Rendering slides" -Status "Completed" -PercentComplete 100
+Write-Progress -Completed -Activity "Rendering slides"
+Write-Host "Done rendering slides"
