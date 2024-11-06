@@ -1,6 +1,7 @@
 ---
 marp: true
 theme: uncover
+title: Microsoft 365 Community Call - Use Kiota
 ---
 
 ## Stephan van Rooij
@@ -80,9 +81,11 @@ Use Kiota to quickly generate a client for your own api that looks like the Micr
 
 #### Stephan van Rooij
 
-@svrooij
-Github / Twitter
+@svrooij [Bluesky](https://bsky.app/profile/svrooij.bsky.social)
+[![github logo](https://icongr.am/simple/github.svg?colored=true)](https://github.com/svrooij) [![linkedin logo](https://icongr.am/simple/linkedin.svg?colored=true)](https://www.linkedin.com/in/stephanvanrooij/) [![twitter logo](https://icongr.am/simple/twitter.svg?colored=true)](https://twitter.com/svrooij)
 
-https://slides.svrooij.io/2024-11-07-m365-community-call/
+Blog: [svrooij.io](https://svrooij.io)
+
+Slides: [slides.svrooij.io](https://slides.svrooij.io/)
 
 ![bg left](assets/me.jpg)
