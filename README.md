@@ -4,6 +4,7 @@ This repository contains slides for a few presentations I've been giving. The sl
 
 ## Presentations
 
+- [2024-11-19 Azure Platform Engineering](https://slides.svrooij.io/2024-11-19-ape-secure-keyvault/) [source](2024-11-19-ape-secure-keyvault/index.md)
 - [2024-11-07 M365 Community Call](https://slides.svrooij.io/2024-11-07-m365-community-call/) [source](2024-11-07-m365-community-call/index.md)
 
 ## License

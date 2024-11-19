@@ -171,12 +171,19 @@ with CI / CD off course..
 
 ---
 
+## Resources
+
+* [Source of demo app](https://github.com/svrooij/SecureMultiTenantApp)
+* [ISV key vault access](https://arsenvlad.medium.com/azure-managed-application-publisher-isv-access-to-azure-key-vault-in-managed-resource-group-in-acc38a2ef441)
+
+---
+
 ### I'm Stephan van Rooij
 
 @svrooij [Bluesky](https://bsky.app/profile/svrooij.bsky.social) [![linkedin logo](https://icongr.am/simple/linkedin.svg?colored=true)](https://www.linkedin.com/in/stephanvanrooij/) [![github logo](https://icongr.am/simple/github.svg?colored=true)](https://github.com/svrooij) [![twitter logo](https://icongr.am/simple/twitter.svg?colored=true)](https://twitter.com/svrooij)
 
 Blog: [svrooij.io](https://svrooij.io)
 
-Slides: [slides.svrooij.io](https://slides.svrooij.io/)
+Slides: [slides.svrooij.io](https://slides.svrooij.io/2024-11-19-ape-secure-keyvault/)
 
 ![bg left:40%](assets/me.jpg)
